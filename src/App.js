@@ -24,7 +24,7 @@ function App() {
   return (
     <div style={{ overflowX: "hidden" }}>
       <Navbar bg="light" variant="light">
-        <Navbar.Brand href="">
+        <Navbar.Brand href="/">
           <img
             src="/logo192.png"
             width="30"
