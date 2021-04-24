@@ -1,3 +1,4 @@
+![Caddapto Logo](/public/favicon.ico?raw=true "Caddapto Logo")
 ### Caddapto
 Convert Caddyfile to CaddyJSON. Visit [caddapto.vercel.app](https://caddapto.vercel.app). This Application is deployed on [Vercel](https://vercel.com) platform.
 
