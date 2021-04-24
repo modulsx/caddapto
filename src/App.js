@@ -22,7 +22,16 @@ function App() {
   return (
     <div style={{ overflowX: "hidden" }}>
       <Navbar bg="light" variant="light">
-        <Navbar.Brand href="#home">Caddapto App</Navbar.Brand>
+        <Navbar.Brand href="">
+          <img
+            src="/logo192.png"
+            width="30"
+            height="30"
+            className="d-inline-block align-top"
+            alt="React Bootstrap logo"
+          />{" "}
+          Caddapto
+        </Navbar.Brand>
         <Button
           className="mr-auto"
           variant="success"
@@ -36,7 +45,11 @@ function App() {
             href="https://github.com/suryamodulus/caddapto"
             target="_blank"
             rel="noreferrer"
-            style={{ color: "inherit", textDecoration: "none" }}
+            style={{
+              color: "inherit",
+              textDecoration: "none",
+              cursor: "pointer",
+            }}
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -71,6 +84,7 @@ function App() {
             autoCapitalize="off"
             spellCheck="false"
             onChange={handleCaddyfileChange}
+            placeholder="Type Caddyfile contents here"
           ></textarea>
         </div>
         <div
@@ -82,12 +96,13 @@ function App() {
           }}
         >
           <div style={{ position: "absolute", right: "15px", zIndex: "10000" }}>
-            <CopyToClipboard text={JSON.stringify(caddyJson)}>
-              <Button variant="primary" size="sm">
+            <CopyToClipboard text={JSON.stringify(caddyJson, null, 2)}>
+              <Button variant="outline-primary" size="sm">
                 Copy To Clipboard
               </Button>
             </CopyToClipboard>
           </div>
+          {/* <pre className="text-white">{JSON.stringify(caddyJson, null, 2)}</pre> */}
           <ReactJson
             src={caddyJson}
             name={false}
