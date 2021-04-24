@@ -2,7 +2,11 @@
 ### Caddapto
 Convert Caddyfile to CaddyJSON. Visit [caddapto.vercel.app](https://caddapto.vercel.app). This Application is deployed on [Vercel](https://vercel.com) platform.
 
-##### DEVELOPMENT
+##### ONE-CLICK DEPLOYMENT
+
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/git/external?repository-url=https%3A%2F%2Fgithub.com%2Fsuryamodulus%2Fcaddapto)
+
+##### LOCAL DEVELOPMENT
 ```
 git clone https://github.com/suryamodulus/caddapto
 cd caddapto
