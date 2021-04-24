@@ -10,14 +10,16 @@ function App() {
     setCaddyfile(event.target.value);
   };
   const handleConvertButton = () => {
-    const requestOptions = {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ input: caddyfile }),
-    };
-    fetch("/api/caddapto", requestOptions)
-      .then((response) => response.json())
-      .then((data) => setCaddyJson(data));
+    if (caddyfile) {
+      const requestOptions = {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ input: caddyfile }),
+      };
+      fetch("/api/caddapto", requestOptions)
+        .then((response) => response.json())
+        .then((data) => setCaddyJson(data));
+    }
   };
   return (
     <div style={{ overflowX: "hidden" }}>
